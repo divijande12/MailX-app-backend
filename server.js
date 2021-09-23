@@ -32,6 +32,7 @@ db.mongoose
   });
 
 require("./routes/auth.routes")(app);
+app.use("/send-mail", require("./routes/send_email.routes"));
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to MailX Server !!!!" });
